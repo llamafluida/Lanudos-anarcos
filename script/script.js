@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //Aquí empieza la galería
 //primer un objeto donde están almacenados los src y el texto de las imágenes
-    var galeria = [{  "src": "./images/galeria1.jpg",
+    let galeria = [{  "src": "./images/galeria1.jpg",
     "texto": "Miembros de la banda en foto grupal"
     },
     {
@@ -22,10 +22,10 @@ $(document).ready(function(){
     }
     ]
 //variable que sirve para indicar el index de la imagen actual
-    var i = 0;
+    let i = 0;
 // variables que contienen los id de los elementos donde estará la imagen y el texto
-    let slide = $("#slide");
-    let slideText = $("#slide-text");
+    const slide = $("#slide");
+    const slideText = $("#slide-text");
 //con esto cuando se carga la página se coloca la primera imagen y texto de la var galeria
     slide.attr("src", galeria[i].src);
     slideText.text(galeria[i].texto);
@@ -58,7 +58,7 @@ $(document).ready(function(){
     });
     //Aquí termina la galería
     //Aquí comienza el botón del header
-    var headerLinks = $("header nav a:nth-child(n+2)");
+    const headerLinks = $("header nav a:nth-child(n+2)");
     $("#toggle-div-button button").click(function(){
         headerLinks.toggleClass("hide-link");
     });
