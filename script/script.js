@@ -62,5 +62,21 @@ $(document).ready(function(){
     $("#toggle-div-button button").click(function(){
         headerLinks.toggleClass("hide-link");
     });
+
+    //galeria
+    const imgGaleria = $("#galeria-img-principal");
+    const txtGaleria = $("#galeria-texto-principal");
+    imgGaleria.attr("src", galeria[0].src);
+    txtGaleria.text(galeria[0].texto);
+
+    for(let iGaleria = 0; iGaleria < galeria.length || iGaleria < imgGaleria.length; iGaleria++) {
+        document.getElementsByClassName("galeria-img")[iGaleria].src = galeria[iGaleria].src;
+        document.getElementsByClassName("galeria-img")[iGaleria].alt = galeria[iGaleria].texto;
+    }
+
+    $(".galeria-img").click(function(){
+        $(imgGaleria).attr("src", this.src);
+        $(txtGaleria).text(this.alt);
+    });
 });
 
