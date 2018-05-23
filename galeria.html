@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <script src="./script/jquery-3.3.1.min.js"></script>
-    <script src="./script/script.js"></script>
+ 
     <!--[if IE]>
         <script src=
         "http://html5shiv.googlecode.com/svn/trunk/html5.js">
@@ -25,21 +25,25 @@
     <header>
         <nav>
             <a href="./index.html"><img src="./images/lanudos-anarcos-sm.png"></a>
-            <a href="./noticias.html" class="hide-link">Noticias</a>
-            <a href="./biografia.html" class="hide-link">Biografía</a>
-            <a href="./media.html" class="hide-link active">Media</a>
+            <a href="./noticias.html" class="hide-link hideLink">Noticias</a>
+            <a href="./biografia.html" class="hide-link hideLink">Biografía</a>
+            <a href="./media.html" class="hide-link hideLink active">Media</a>
         </nav>
-        <div id="toggle-div-button"><button><i class="fas fa-bars fa-2x"></i></button></div>
-    </header>
+        <div id="toggle-div-button-header"><button id="toggle-button-header"><i class="fas fa-bars fa-2x"></i></button></div>
+    </header>  
+    <div id="toggle-visor">  
+        <div id="galeria-img-container">
+            <div><button id="close-visor">&times;</button></div>
+            <img id="galeria-img-principal">
+            <p id="galeria-texto-principal"></p>
+            
+            
+        </div>
+        
+    </div>
     <main id="galeria-pagina">
         <div id="banner-top">
             <h1>galeria</h1>
-        </div>
-        <div> 
-            <div id="galeria-img-container">
-                <img id="galeria-img-principal">
-                <p id="galeria-texto-principal"></p>
-            </div>
         </div>
         <section><div><img class="galeria-img"></div><div><img class="galeria-img"></div><div><img class="galeria-img"></div><div><img class="galeria-img"></div></section>
         <section><div><img class="galeria-img"></div><div><img class="galeria-img"></div><div><img class="galeria-img"></div><div><img class="galeria-img"></div></section>
@@ -48,6 +52,7 @@
     <footer>
             <p>© 2018 Iván Arturo Gutiérrez Castro</p>
     </footer>
+    <script src="./script/script.js"></script>
 </body>
 </html>
     

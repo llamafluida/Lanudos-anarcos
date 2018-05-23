@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <script src="./script/jquery-3.3.1.min.js"></script>
-    <script src="./script/script.js"></script>
     <!--[if IE]>
         <script src=
         "http://html5shiv.googlecode.com/svn/trunk/html5.js">
@@ -25,11 +24,11 @@
     <header>
         <nav>
             <a href="./index.html"><img src="./images/lanudos-anarcos-sm.png"></a>
-            <a href="./noticias.html" class="hide-link">Noticias</a>
-            <a href="./biografia.html" class="hide-link">Biografía</a>
-            <a href="./media.html" class="hide-link">Media</a>
+            <a href="./noticias.html" class="hide-link hideLink">Noticias</a>
+            <a href="./biografia.html" class="hide-link hideLink">Biografía</a>
+            <a href="./media.html" class="hide-link hideLink">Media</a>
         </nav>
-        <div id="toggle-div-button"><button><i class="fas fa-bars fa-2x"></i></button></div>
+        <div id="toggle-div-button-header"><button id="toggle-button-header"><i class="fas fa-bars fa-2x"></i></button></div>
     </header>
     <main id="main">
         <img src="./images/pradera-roja.png">
@@ -50,13 +49,13 @@
                 <div>
                 <div id="outer-slide">
                     
-                        <i class="fas fa-chevron-left" id="prev"></i>
+                        <div><button id="prev">&larr;</button>
                         
                         
                     <div id="inner-slide">
-                        <a  href="./galeria.html"><img id="slide"></a><p id="slide-text"></p> 
+                        <a  href="./galeria.html"><img id="slide" src=""></a><p id="slide-text"></p> 
                     </div>
-                    <i class="fas fa-chevron-right" id="next"></i>
+                    <button id="next">&rarr;</button>
                 </div>
             </div>
             </section>
@@ -112,5 +111,6 @@
     <footer>
         <p>© 2018 Iván Arturo Gutiérrez Castro</p>
     </footer>
+    <script src="./script/script.js"></script>
 </body>
 </html>
