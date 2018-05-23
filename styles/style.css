@@ -69,14 +69,14 @@ header > nav > a:nth-child(n+2):hover {
     grid-row: 1;
 }
 
-#toggle-div-button {
+#toggle-div-button-header {
     flex: 1;
     justify-content: flex-end;
     margin-top: 7px;
     margin-right: 7px;
     display: none;
 }
-#toggle-div-button > button {
+#toggle-button-header {
     outline: none;
     cursor: pointer;
     background: none;
@@ -206,16 +206,20 @@ float: left;
     float: left;
     margin-top: 130px;
     cursor: pointer;
-
+    border-radius: 100%;
+    background-color: rgb(150, 7, 7);
+    padding: 0;
+    font-size: 20px;
+    border: 1.5px solid rgb(201, 199, 199); 
+    outline: none;
+    
 }
 #prev {
     position: relative;
     z-index: 2;
-    margin-right: 14px;
 }
 #next {
     position: relative;
-    margin-left: 12px;
     z-index: 2;
     
 }
@@ -369,22 +373,58 @@ float: left;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 300px repeat(3, auto);
+    row-gap: 50px;
+}
+#toggle-visor {
+    display: none;
+    position:fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    animation-name:visoropen;
+    animation-duration: 0.5s;
+}
+@keyframes visoropen{
+    from{opacity: 0}
+    to{opacity: 1}
 }
 #galeria-img-container {
-    max-width: 300px;
-    margin: 50px auto;
+    flex: 1;
+    align-self: center;
+    max-width: 28%;
+    margin: 0 auto;
     text-align: center;
-    border: 5px solid rgb(201, 199, 199); 
+    
+}
+#galeria-img-container > div{
+    margin-left: 100%;
+    z-index: 4;
+    margin-bottom: -3%;
+    position: relative;
+}
+#close-visor {
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px solid rgb(150, 7, 7); 
+    background: black;
+    color: rgb(150, 7, 7);
+    outline: none;
 }
 #galeria-img-principal {
     width: 100%;
+    border: 5px solid rgb(201, 199, 199);
 }
 #galeria-pagina > section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     justify-items: center;
-    margin: 20px 10%;
+    margin: 0 10%;
 }
 #galeria-pagina > section > div {
     width: 150px;
@@ -392,6 +432,12 @@ float: left;
 #galeria-pagina > section > div > img.galeria-img {
     width: 100%;
     cursor: pointer;
+}
+.galeria-img {
+    transition: 0.3s;
+}
+.galeria-img:hover {
+    transform: scale(1.1);
 }
 
 @media all and (max-width: 885px){
@@ -406,7 +452,7 @@ float: left;
     header > nav {
     flex-direction: column;
     }
-    #toggle-div-button {
+    #toggle-div-button-header {
         display: flex;
     }
     .hide-link {
